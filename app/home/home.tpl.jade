@@ -1,1 +1,13 @@
-h2 home
+.header
+  img(ng-src="images/home/logo.jpg")
+formLogin(layout="column")
+  md-content
+    md-input-container
+      label Name
+      md-icon.md-svg-src="img/icons/ic_person_24px.svg"
+    md-input-container
+      label Password
+      md-icon.md-svg-src="img/icons/ic_person_24px.svg"
+    md-button.md-raised.md-primary Send
+    md-button.md-raised.md-primary(ng-href="/#/dashboard") Go Dashboard
+    
