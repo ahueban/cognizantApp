@@ -1,14 +1,14 @@
 .header
   img(ng-src="images/home/logo.jpg")
-formLogin(layout="column")
-  md-content 
-    md-input-container.md-block
-      md-icon(md-svg-icon="account" class="name")
-      input(placeholder="Name" ng-required="true")
-    md-input-container.md-block
-      md-icon(md-svg-icon="lock-open" class="password")
-      input(type="password" placeholder="Password" ng-required="true")  
-    md-button.md-raised.md-primary Sign in
-    md-button.md-raised.md-warn Register
-    md-button.md-raised.md-primary(ng-href="/#/dashboard") Go Dashboard
-    
+div(layout="row" layout-align="center center")  
+  .formLogin
+      md-input-container.md-block
+        md-icon(md-svg-icon="account" class="name")
+        input(placeholder="Name" ng-required="true")
+      md-input-container.md-block
+        md-icon(md-svg-icon="lock-open" class="password")
+        input(type="password" placeholder="Password" ng-required="true")  
+      md-button.md-raised.md-primary Sign in
+      md-button.md-raised.md-warn Register
+      md-button.md-raised.md-primary(ng-href="/#/dashboard") Go Dashboard
+
