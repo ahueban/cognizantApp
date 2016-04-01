@@ -9,5 +9,6 @@ angular
   .module 'cognizantApp', [
     'ngMaterial',
     'ui.router',
-    'home'
+    'home',
+    'dashboard'
   ]
