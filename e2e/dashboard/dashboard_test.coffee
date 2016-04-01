@@ -9,7 +9,7 @@ describe 'Dashboard page', ->
 
   beforeEach ->
     dashboardPage = new DashboardPagePo
-    browser.get '/#/dashboard';
+    browser.get '/#/dashboard'
 
   it 'should say DashboardCtrl', ->
     expect(dashboardPage.heading.getText()).toEqual 'dashboard'
