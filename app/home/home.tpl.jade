@@ -1,13 +1,13 @@
 .header
   img(ng-src="images/home/logo.jpg")
 formLogin(layout="column")
-  md-content
-    md-input-container
-      label Name
-      md-icon.md-svg-src="img/icons/ic_person_24px.svg"
-    md-input-container
-      label Password
-      md-icon.md-svg-src="img/icons/ic_person_24px.svg"
+  md-content 
+    md-input-container.md-block
+      md-icon(md-svg-icon="account" class="name")
+      input(placeholder="Name" ng-required="true")
+    md-input-container.md-block
+      md-icon(md-svg-icon="lock-open" class="password")
+      input(type="password" placeholder="Password" ng-required="true")  
     md-button.md-raised.md-primary Send
     md-button.md-raised.md-primary(ng-href="/#/dashboard") Go Dashboard
     
