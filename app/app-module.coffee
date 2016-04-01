@@ -12,3 +12,7 @@ angular
     'home',
     'dashboard'
   ]
+  .config ($mdThemingProvider) ->
+    $mdThemingProvider.theme 'default'
+      .primaryPalette 'grey'
+      
