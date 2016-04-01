@@ -15,4 +15,7 @@ angular
   .config ($mdThemingProvider) ->
     $mdThemingProvider.theme 'default'
       .primaryPalette 'grey'
+  .config ($mdIconProvider) ->
+    $mdIconProvider.defaultIconSet 'images/icons/mdi.svg'
+    return
       
