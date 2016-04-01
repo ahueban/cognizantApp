@@ -1,12 +1,16 @@
 .header {
   max-width: 100%;
   text-align: center;
+  background-color: white;
+  box-shadow: 5px 5px 10px #9E9E9E;
 }
 .imgHeader{
-  width: 30%;
+  width: 25%;
 }
 .formLogin {
+  margin-top: 5%;
   border: 1px solid #9E9E9E;
   padding: 5%;
   box-shadow: 5px 5px 10px #9E9E9E;
+  background-color: white;
 }
