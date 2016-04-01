@@ -8,9 +8,13 @@
 
 ###
 class DashboardCtrl
-  constructor: ->
+  $inject = ['$mdSidenav']
+  constructor: (@$mdSidenav) ->
     @ctrlName = 'DashboardCtrl'
-
+  mail: ->
+    @$mdSidenav('right').toggle()
+    
 angular
   .module('dashboard')
   .controller 'DashboardCtrl', DashboardCtrl
+  
