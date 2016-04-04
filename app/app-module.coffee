@@ -11,7 +11,8 @@ angular
     'ui.router',
     'home',
     'dashboard',
-    'services'
+    'services',
+    'firebase'
   ]
   .config ($mdThemingProvider) ->
     $mdThemingProvider.theme 'default'
