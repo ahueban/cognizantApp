@@ -10,9 +10,4 @@
 angular
   .module 'services'
   .factory 'Firebase', ->
-    FirebaseBase = {}
-    FirebaseBase.someValue = 'Firebase'
-    FirebaseBase.someMethod = ->
-      'Firebase'
-
-    FirebaseBase
+    ref = new Firebase("https://blistering-heat-7559.firebaseio.com/")
