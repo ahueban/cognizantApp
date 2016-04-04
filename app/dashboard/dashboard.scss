@@ -1,3 +1,6 @@
+$corporativeGreen: #6DB33F;
+$corporativeBlue: #50B3CF;
+
 // Header
 .user-img{
   margin: auto;
@@ -11,4 +14,15 @@
 .menu-element{
   text-decoration: none;
   color: grey
+}
+
+// Mail
+md-sidenav, 
+md-sidenav.md-locked-open, 
+md-sidenav.md-closed.md-locked-open-add-active {
+    min-width: 30% !important;
+    max-width: 30% !important;
+}
+.iconActive:hover{
+  color: $corporativeGreen
 }
