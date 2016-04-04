@@ -1,11 +1,13 @@
 div
+  // Header
   md-toolbar
     .md-toolbar-tools
       img.user-img(src="images/dashboard/cognizantLogo.png")
       h2 Username
       span(flex)
-      a.menu-element(ng-click='dashboard.mail()')
-        md-icon(md-svg-icon='email')      
+      a.menu-element(ng-click='dashboard.mail()' ui-sref='dashboard.inbox')
+        md-icon(md-svg-icon='email')
+  // Menu
   div(layout='row' layout-sm="column")
     div(flex-gt-sm='20')
       md-list
@@ -32,9 +34,20 @@ div
             p  Logout
         md-divider
     div(flex-gt-sm="80")
-      div(flex)
-        ui-view
-    // Inbox
+      div(flex) Content
+    // Mail
     md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='right')
       md-toolbar.md-theme-light
-        h1.md-toolbar-tools INBOX
+        h2.md-toolbar-tools Mail
+        md-content
+          md-content(layout='row')
+            md-button.md-icon-button
+              md-icon(md-svg-icon='pencil' class='iconActive')
+            md-button.md-icon-button(ui-sref='dashboard.inbox')
+              md-icon(md-svg-icon='email' class='iconActive')
+            md-button.md-icon-button(ui-sref='dashboard.outbox')
+              md-icon(md-svg-icon='fast-forward' class='iconActive')
+            md-button.md-icon-button(ui-sref='dashboard.trash')
+              md-icon(md-svg-icon='delete' class='iconActive')
+          ui-view
+          
