@@ -22,9 +22,7 @@
     md-button.md-raised.md-primary(ng-click="signIn.login(signIn.user, signIn.password)" ng-hide="signIn.registration") Sign in
     md-button.md-raised.md-warn(ng-click="signIn.register()" ng-hide="signIn.registration") Register
     md-button.md-raised.md-primary(ng-show="signIn.registration") Save    
-    md-button.md-raised.md-warn(ng-show="signIn.registration") Cancel
-
-    
+    md-button.md-raised.md-warn(ng-click="signIn.cancel()" ng-show="signIn.registration") Cancel
       
     md-button.md-raised.md-primary(ng-href="/#/dashboard") Go Dashboard
 

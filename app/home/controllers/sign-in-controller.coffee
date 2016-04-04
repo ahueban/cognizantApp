@@ -16,6 +16,8 @@ class SignInCtrl
     @Login.login(user, password)
   register: ->
     @registration = true
+  cancel: ->
+    @registration = false
 
 angular
   .module('home')
