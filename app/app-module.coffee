@@ -10,7 +10,8 @@ angular
     'ngMaterial',
     'ui.router',
     'home',
-    'dashboard'
+    'dashboard',
+    'services'
   ]
   .config ($mdThemingProvider) ->
     $mdThemingProvider.theme 'default'
