@@ -1,8 +1,11 @@
+html, body {
+  height: 100%;
+}
 .header {
   max-width: 100%;
   text-align: center;
   background-color: white;
-  box-shadow: 5px 5px 10px #9E9E9E;
+  box-shadow: 5px 5px 5px #9E9E9E;
 }
 .imgHeader{
   width: 25%;
@@ -13,4 +16,13 @@
   padding: 5%;
   box-shadow: 5px 5px 10px #9E9E9E;
   background-color: white;
+}
+.content {
+  background-image:url('../../images/home/background.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: fixed;
 }

@@ -10,12 +10,19 @@
 angular
   .module 'home'
   .factory 'Login', ->
-    LoginBase = {}
-    LoginBase.someValue = 'Login'
-    LoginBase.someMethod = ->
-      'Login'
-
-    LoginBase
+    alert "inside"
+    ref = new Firebase("https://blistering-heat-7559.firebaseio.com/")
+    alert "hello"
+    ref.createUser {
+      email: "lau@finrkkkebase.com"
+      password: "correcthorsjkebatterystaple"
+      phone: "986259875"
+    }, (error, userData) ->
+      if error
+        console.log 'Error creating user:', error
+      else
+        console.log 'Successfully created user account with uid:', userData.uid
+      return
 
 users = [
   {
