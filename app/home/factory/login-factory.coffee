@@ -10,9 +10,7 @@
 angular
   .module 'home'
   .factory 'Login', ->
-    alert "inside"
     ref = new Firebase("https://blistering-heat-7559.firebaseio.com/")
-    alert "hello"
     ref.createUser {
       email: "lau@finrkkkebase.com"
       password: "correcthorsjkebatterystaple"
