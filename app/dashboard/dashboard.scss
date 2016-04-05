@@ -1,3 +1,15 @@
+$corporativeGreen: #6DB33F;
+$corporativeBlue: #50B3CF;
+
+.btnd:active,
+.btnd:focus,
+.btnd.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 // Header
 .user-img{
   margin: auto;
@@ -11,4 +23,33 @@
 .menu-element{
   text-decoration: none;
   color: grey
+}
+
+// Mail
+md-sidenav, 
+md-sidenav.md-locked-open, 
+md-sidenav.md-closed.md-locked-open-add-active {
+    min-width: 30% !important;
+    max-width: 30% !important;
+}
+.emailIcon:hover{
+  color: $corporativeGreen
+}
+md-toolbar a.active md-icon{
+  color: $corporativeGreen
+}
+.new-email{
+  padding: 15% 15% 5% 15%;
+  font-size: 12pt
+}
+.log-but{
+  margin: 1em 0 1em 0;
+  width: 100%;
+  border: 1px solid $corporativeGreen;
+  color: $corporativeGreen !important
+}
+.log-but:hover, .log-but:focus{
+  background-color: $corporativeGreen !important;
+  border-bottom: 1px solid $corporativeGreen;
+  color: white !important
 }
