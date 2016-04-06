@@ -9,10 +9,14 @@
 ###
 angular
   .module 'home'
-  .factory 'Register', ->
-    RegisterBase = {}
-    RegisterBase.someValue = 'Register'
-    RegisterBase.someMethod = ->
-      'Register'
-
-    RegisterBase
+  .factory 'Register', ['Database', (Database) ->
+    Database.createUser {
+      email: "aa@aa.com"
+      password: "bb"
+    }, (error, userData) ->
+      if error
+        console.log 'Error creating user:', error
+      else
+        console.log 'Successfully created user account with uid:', userData.uid
+      return
+  ]
