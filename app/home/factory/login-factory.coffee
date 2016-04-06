@@ -10,8 +10,6 @@
 angular
   .module 'home'
   .factory 'Login',['Database', (Database) ->
-<<<<<<< c8b31e1d8d1fed198d18c914d7e94b5547f8fdc0
-=======
     login: (user, password) ->
       Database.authWithPassword {
         email: user
@@ -23,5 +21,4 @@ angular
           console.log "Authenticated succesfully: ", authData
         return
       ), remember: 'sessionOnly'
->>>>>>> login factory
   ]
