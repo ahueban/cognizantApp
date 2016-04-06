@@ -9,9 +9,9 @@
 ###
 angular
   .module 'home'
-  .factory 'Login', ->
-    ref = new Firebase("https://blistering-heat-7559.firebaseio.com/")
-    ref.authWithPassword {
+  .factory 'Login',['Database', (Database) ->
+    #console.log Database
+    Database.authWithPassword {
       email: "aa@aa.com"
       password: "bb"
     }, ((error, authData) ->
@@ -21,4 +21,6 @@ angular
         console.log "Authenticated succesfully: ", authData
       return
     ), remember: 'sessionOnly'
+  ]
+
 
