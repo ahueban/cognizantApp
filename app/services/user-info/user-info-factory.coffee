@@ -16,3 +16,5 @@ angular
       'UserInfo'
 
     UserInfoBase
+
+    
