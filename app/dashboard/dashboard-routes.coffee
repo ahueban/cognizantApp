@@ -39,3 +39,4 @@ angular
             controller: 'DashboardProfileCtrl'
             controllerAs: 'profile'
             
+            
