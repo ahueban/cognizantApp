@@ -9,9 +9,8 @@
 ###
 angular
   .module 'home'
-  .factory 'Register', ->
-    ref = new Firebase("https://blistering-heat-7559.firebaseio.com/")
-    ref.createUser {
+  .factory 'Register', ['Database', (Database) ->
+    Database.createUser {
       email: "aa@aa.com"
       password: "bb"
     }, (error, userData) ->
@@ -20,3 +19,4 @@ angular
       else
         console.log 'Successfully created user account with uid:', userData.uid
       return
+  ]
