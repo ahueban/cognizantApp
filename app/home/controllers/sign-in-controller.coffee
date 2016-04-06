@@ -8,12 +8,12 @@
 
 ###
 class SignInCtrl
-  @inject = ['Login', 'Register', 'Firebase']
+  @inject = ['Login', 'Register']
   @registration = false
-  constructor: (@Login, @Register, @Firebase) ->
+  constructor: (@Login, @Register) ->
     @ctrlName = 'SignInCtrl'
   login: (user, password) ->
-    @Login.login(user, password, @Firebase)
+    @Login.login(user, password)
   register: ->
     @registration = true
   cancel: ->
