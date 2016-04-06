@@ -7,16 +7,25 @@
  # @description
 
 ###
+
+
 angular
   .module 'home'
   .factory 'Register', ['Database', (Database) ->
-    Database.createUser {
-      email: "aa@aa.com"
-      password: "bb"
-    }, (error, userData) ->
-      if error
-        console.log 'Error creating user:', error
-      else
-        console.log 'Successfully created user account with uid:', userData.uid
-      return
+    saveRegister: (name, phone, email, password) ->
+      Database.createUser {
+        email: email
+        password: password
+      }, (error, userData) ->
+        if error
+          alert 'Error creating user:', error
+        else
+          alert 'Successfully created user account with uid:', userData.uid
+          usersRef = Database.child("users")
+          usersRef.set {
+            name: name
+            phone: phone
+            uid: userData.uid
+          }
+        return
   ]

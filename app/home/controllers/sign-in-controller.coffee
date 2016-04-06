@@ -8,16 +8,18 @@
 
 ###
 class SignInCtrl
-  @inject = ['Login', 'Register', 'Firebase']
+  @inject = ['Login', 'Register']
   @registration = false
-  constructor: (@Login, @Register, @Firebase) ->
+  constructor: (@Login, @Register) ->
     @ctrlName = 'SignInCtrl'
-  login: (user, password) ->
-    @Login.login(user, password, @Firebase)
+  login: (email, password) ->
+    @Login.login(email, password)
   register: ->
     @registration = true
   cancel: ->
     @registration = false
+  saveRegister: (name, phone, email, password) ->
+    @Register.saveRegister(name, phone, email, password)
 
 angular
   .module('home')
