@@ -10,7 +10,6 @@
 angular
   .module 'home'
   .factory 'Login',['Database', (Database) ->
-    #console.log Database
     Database.authWithPassword {
       email: "aa@aa.com"
       password: "bb"
@@ -22,5 +21,3 @@ angular
       return
     ), remember: 'sessionOnly'
   ]
-
-
