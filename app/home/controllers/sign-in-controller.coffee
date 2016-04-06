@@ -12,12 +12,14 @@ class SignInCtrl
   @registration = false
   constructor: (@Login, @Register) ->
     @ctrlName = 'SignInCtrl'
-  login: (user, password) ->
-    @Login.login(user, password)
+  login: (email, password) ->
+    @Login.login(email, password)
   register: ->
     @registration = true
   cancel: ->
     @registration = false
+  saveRegister: ->
+    @Register.saveRegister()
 
 angular
   .module('home')

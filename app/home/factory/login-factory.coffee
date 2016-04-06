@@ -10,15 +10,16 @@
 angular
   .module 'home'
   .factory 'Login',['Database', (Database) ->
-    login: (user, password) ->
+    login: (email, password) ->
       Database.authWithPassword {
-        email: user
+        email: email
         password: password
       }, ((error, authData) ->
         if error
           console.log "Login Failed!", error
+          alert "Login Failed!"
         else
-          console.log "Authenticated succesfully: ", authData
+          alert "Authenticated succesfully!"
         return
       ), remember: 'sessionOnly'
   ]
