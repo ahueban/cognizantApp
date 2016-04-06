@@ -24,4 +24,3 @@ angular
   .module('dashboard')
   .controller 'DashboardCtrl', DashboardCtrl
   
-  
