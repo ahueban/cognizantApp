@@ -15,10 +15,10 @@ angular
         email: user
         password: password
       }, ((error, authData) ->
-      if error
-        console.log "Login Failed!", error
-      else
-        console.log "Authenticated succesfully: ", authData
-      return
+        if error
+          console.log "Login Failed!", error
+        else
+          console.log "Authenticated succesfully: ", authData
+        return
       ), remember: 'sessionOnly'
   ]
