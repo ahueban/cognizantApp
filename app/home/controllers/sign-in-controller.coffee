@@ -18,8 +18,8 @@ class SignInCtrl
     @registration = true
   cancel: ->
     @registration = false
-  saveRegister: ->
-    @Register.saveRegister()
+  saveRegister: (name, phone, email, password) ->
+    @Register.saveRegister(name, phone, email, password)
 
 angular
   .module('home')
