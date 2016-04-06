@@ -34,7 +34,7 @@ div
             md-button(aria-label='Logout' ng-click='dashboard.logout()')
               md-icon(md-svg-icon='account-off')
               | Logout
-      h2 Username
+      h2(ng-bind='dashboard.userTitle()')
       span(flex)
       a.menu-element(ng-click='dashboard.mail()' ui-sref='dashboard.inbox').btnd
         md-icon(md-svg-icon='email')
