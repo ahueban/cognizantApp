@@ -8,21 +8,18 @@
           md-icon(md-svg-icon="radiobox-marked" class="name")
           input(ng-model="signIn.name" type="text" placeholder="Name" ng-required="true")    
         md-input-container.md-block
-          md-icon(md-svg-icon="mail-ru" class="email")
-          input(ng-model="signIn.email" type="email" placeholder="Email" ng-required="true")
-        md-input-container.md-block
           md-icon(md-svg-icon="phone-classic" class="phone")
           input(ng-model="signIn.phone" type="tel" placeholder="Phone" ng-required="true")
       md-input-container.md-block
-        md-icon(md-svg-icon="account" class="user")
-        input(ng-model="signIn.user" placeholder="User" ng-required="true")
+        md-icon(md-svg-icon="account" class="email")
+        input(ng-model="signIn.email" placeholder="Email" ng-required="true")
       md-input-container.md-block
         md-icon(md-svg-icon="lock-open" class="password")
         input(ng-model="signIn.password" type="password" placeholder="Password" ng-required="true")
 
-      md-button.md-raised.md-primary(ng-click="signIn.login(signIn.user, signIn.password)" ng-hide="signIn.registration") Sign in
+      md-button.md-raised.md-primary(ng-click="signIn.login(signIn.email, signIn.password)" ng-hide="signIn.registration") Sign in
       md-button.md-raised.md-warn(ng-click="signIn.register()" ng-hide="signIn.registration") Register
-      md-button.md-raised.md-primary(ng-show="signIn.registration") Save    
+      md-button.md-raised.md-primary(ng-show="signIn.registration" ng-click="signIn.saveRegister()") Save    
       md-button.md-raised.md-warn(ng-click="signIn.cancel()" ng-show="signIn.registration") Cancel
 
       md-button.md-raised.md-primary(ng-href="/#/dashboard") Go Dashboard
