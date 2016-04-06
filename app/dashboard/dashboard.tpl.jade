@@ -2,45 +2,58 @@ div
   // Header
   md-toolbar
     .md-toolbar-tools
-      img.user-img(src="images/dashboard/cognizantLogo.png")
+      md-menu
+        md-button.md-icon-button(ng-click="$mdOpenMenu($event)" aria-label='Options')
+          img.user-img(src="images/dashboard/cognizantLogo.png")
+        md-menu-content
+          md-menu-item
+            md-button(aria-label='HTML5')
+              md-icon(md-svg-icon='language-html5')
+              | HTML5
+          md-menu-item
+            md-button(aria-label='CSS3')
+              md-icon(md-svg-icon='language-css3')
+              | CSS3
+          md-menu-item
+            md-button(aria-label='JavaScript')
+              md-icon(md-svg-icon='language-javascript')
+              | JavaScript
+          md-divider
+          md-divider
+          md-menu-item
+            md-button(aria-label='Statistics')
+              md-icon(md-svg-icon='chart-line')
+              | Statistics
+          md-divider
+          md-divider
+          md-menu-item(ui-sref='dashboard.profile')
+            md-button(aria-label='Profile')
+              md-icon(md-svg-icon='account-circle')
+              | Profile
+          md-menu-item
+            md-button(aria-label='Logout' ng-click='dashboard.logout()')
+              md-icon(md-svg-icon='account-off')
+              | Logout
       h2 Username
       span(flex)
       a.menu-element(ng-click='dashboard.mail()' ui-sref='dashboard.inbox').btnd
         md-icon(md-svg-icon='email')
-  // Menu
+  // Content
   div(layout='row' layout-sm="column")
-    div(flex-gt-sm='20')
-      md-list
-        a.menu-element.cursorPointer
-          md-list-item
-            md-icon(md-svg-icon='language-html5')
-            p  HTML5
-        md-divider
-        a.menu-element.cursorPointer
-          md-list-item
-            md-icon(md-svg-icon='language-css3')
-            p  CSS3
-        md-divider
-        a.menu-element.cursorPointer
-          md-list-item
-            md-icon(md-svg-icon='language-javascript')
-            p  JavaScript
-        md-divider
-    div(flex-gt-sm="80")
-      div(flex) CONTENT
-    // Mail
-    md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='right')
-      md-toolbar.md-theme-light
-        h2.md-toolbar-tools Mail
-        md-content
-          md-content(layout='row')
-            md-button.md-icon-button(ui-sref='dashboard.newMail' ui-sref-active="active")
-              md-icon.emailIcon.btnd(md-svg-icon='pencil')
-            md-button.md-icon-button(ui-sref='dashboard.inbox' ui-sref-active="active")
-              md-icon.emailIcon.btnd(md-svg-icon='email')
-            md-button.md-icon-button(ui-sref='dashboard.outbox' ui-sref-active="active")
-              md-icon.emailIcon.btnd(md-svg-icon='fast-forward')
-            md-button.md-icon-button(ui-sref='dashboard.trash' ui-sref-active="active")
-              md-icon.emailIcon.btnd(md-svg-icon='delete')
-          ui-view
-          
+    div(ui-view='content')
+  // Mail
+  md-sidenav.md-sidenav-right.md-whiteframe-4dp(md-component-id='right')
+    md-toolbar.md-theme-light
+      h2.md-toolbar-tools Mail
+      md-content
+        md-content(layout='row')
+          md-button.md-icon-button(ui-sref='dashboard.newMail' ui-sref-active="active")
+            md-icon.emailIcon.btnd(md-svg-icon='pencil')
+          md-button.md-icon-button(ui-sref='dashboard.inbox' ui-sref-active="active")
+            md-icon.emailIcon.btnd(md-svg-icon='email')
+          md-button.md-icon-button(ui-sref='dashboard.outbox' ui-sref-active="active")
+            md-icon.emailIcon.btnd(md-svg-icon='fast-forward')
+          md-button.md-icon-button(ui-sref='dashboard.trash' ui-sref-active="active")
+            md-icon.emailIcon.btnd(md-svg-icon='delete')
+        ui-view
+        
