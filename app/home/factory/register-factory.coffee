@@ -18,9 +18,9 @@ angular
         password: password
       }, (error, userData) ->
         if error
-          console.log 'Error creating user:', error
+          alert 'Error creating user:', error
         else
-          console.log 'Successfully created user account with uid:', userData.uid
+          alert 'Successfully created user account with uid:', userData.uid
           usersRef = Database.child("users")
           usersRef.set {
             name: name
