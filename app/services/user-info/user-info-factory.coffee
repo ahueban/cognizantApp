@@ -17,4 +17,5 @@ angular
       name = response.data[uid].name
       defer.resolve(name)
     defer.promise
+    "test"
   ]
