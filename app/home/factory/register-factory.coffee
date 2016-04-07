@@ -21,11 +21,10 @@ angular
           alert 'Error creating user:', error
         else
           alert 'Successfully created user account with uid:', userData.uid
-          usersRef = Database.child("users")
+          usersRef = Database.child("users").child(userData.uid)
           usersRef.set {
-            name: name
             phone: phone
-            uid: userData.uid
+            name: name
           }
         return
   ]
