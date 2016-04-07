@@ -1,4 +1,5 @@
 @import '../colors';
+@import '../buttons';
 
 .btnd:active,
 .btnd:focus,
@@ -43,15 +44,4 @@ md-toolbar a.active md-icon{
 .new-email{
   padding: 15% 15% 5% 15%;
   font-size: 12pt
-}
-.log-but{
-  margin: 1em 0 1em 0;
-  width: 100%;
-  border: 1px solid $corporativeGreen;
-  color: $corporativeGreen !important
-}
-.log-but:hover, .log-but:focus{
-  background-color: $corporativeGreen !important;
-  border-bottom: 1px solid $corporativeGreen;
-  color: white !important
 }
