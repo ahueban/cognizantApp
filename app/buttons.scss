@@ -21,3 +21,14 @@
   border-bottom: 1px solid $corporativeBlue;
   color: white !important
 }
+.btn-grey{
+  margin: 1em 0 1em 0;
+  width: 100%;
+  border: 1px solid #5F5E5E;
+  color: #5F5E5E !important
+}
+.btn-grey:hover, .btn-grey:focus{
+  background-color: #5F5E5E !important;
+  border-bottom: 1px solid #5F5E5E;
+  color: white !important
+}
