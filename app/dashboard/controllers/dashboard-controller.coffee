@@ -8,16 +8,18 @@
 
 ###
 class DashboardCtrl
-  $inject = ['$mdSidenav'
-             '$mdDialog'
-             'Logout']
+  $inject = [ '$mdSidenav'
+              '$mdDialog'
+              'Logout'
+              'UserInfo']
   constructor: (@$mdSidenav,
                 @$mdDialog,
-                @Logout) ->
+                @Logout,
+                @UserInfo) ->
     @ctrlName = 'DashboardCtrl'
-  userTitle: ->
-    #userTitle = @userInfo()
-    userTitle = 'test user name'
+  userName: ->
+    @UserInfo.then (value) ->
+      console.log value
   mail: ->
     @$mdSidenav('right').toggle()
   logout: ->
@@ -26,5 +28,4 @@ class DashboardCtrl
 angular
   .module('dashboard')
   .controller 'DashboardCtrl', DashboardCtrl
-  
   
