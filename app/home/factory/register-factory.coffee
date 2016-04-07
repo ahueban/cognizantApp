@@ -20,11 +20,12 @@ angular
         if error
           alert 'Error creating user:', error
         else
-          alert 'Successfully created user account with uid:', userData.uid
+          alert 'Successfully created user account. '
           usersRef = Database.child("users").child(userData.uid)
           usersRef.set {
             phone: phone
             name: name
           }
+          $state.go('dashboard')
         return
   ]

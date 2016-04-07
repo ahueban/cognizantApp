@@ -28,7 +28,6 @@ angular
         else
           alert "Authenticated succesfully "
           $state.go('dashboard')
-          #window.location.href = "/#/dashboard"
         return
       ), remember: 'sessionOnly'
   ]
