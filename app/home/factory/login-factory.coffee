@@ -9,7 +9,7 @@
 ###
 angular
   .module 'home'
-  .factory 'Login',['Database', (Database) ->
+  .factory 'Login',['Database', '$state', (Database, $state) ->
     login: (user, password) ->
       Database.authWithPassword {
         email: user
@@ -24,9 +24,11 @@ angular
             when "INVALID_USER"
               alert "The specified user account does not exist."
             else
-              alert "Error logging user in:", error
+              alert "Error logging user"
         else
-          console.log "Authenticated succesfully: ", authData
+          alert "Authenticated succesfully "
+          $state.go('dashboard')
+          #window.location.href = "/#/dashboard"
         return
       ), remember: 'sessionOnly'
   ]
