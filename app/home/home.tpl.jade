@@ -17,7 +17,7 @@
         md-icon(md-svg-icon="lock-open" class="password")
         input(ng-model="signIn.password" type="password" placeholder="Password" ng-required="true")
 
-      md-button.md-raised.md-primary(ng-click="signIn.login(signIn.email, signIn.password)" ng-hide="signIn.registration") Sign in
+      md-button.btn-green(ng-click="signIn.login(signIn.email, signIn.password)" ng-hide="signIn.registration") Sign in
       md-button.md-raised.md-warn(ng-click="signIn.register()" ng-hide="signIn.registration") Register
       md-button.md-raised.md-primary(ng-show="signIn.registration" ng-click="signIn.saveRegister(signIn.name, signIn.phone, signIn.email, signIn.password)") Save    
       md-button.md-raised.md-warn(ng-click="signIn.cancel()" ng-show="signIn.registration") Cancel

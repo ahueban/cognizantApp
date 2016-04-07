@@ -1,0 +1,23 @@
+@import 'colors';
+.btn-green{
+  margin: 1em 0 1em 0;
+  width: 100%;
+  border: 1px solid $corporativeGreen;
+  color: $corporativeGreen !important
+}
+.btn-green:hover, .btn-green:focus{
+  background-color: $corporativeGreen !important;
+  border-bottom: 1px solid $corporativeGreen;
+  color: white !important
+}
+.btn-blue{
+  margin: 1em 0 1em 0;
+  width: 100%;
+  border: 1px solid $corporativeBlue;
+  color: $corporativeBlue !important
+}
+.btn-blue:hover, .btn-blue:focus{
+  background-color: $corporativeBlue !important;
+  border-bottom: 1px solid $corporativeBlue;
+  color: white !important
+}
