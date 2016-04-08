@@ -17,8 +17,8 @@ class DashboardCtrl
                 @Logout,
                 @UserInfo) ->
     @ctrlName = 'DashboardCtrl'
-  userName: ->
-    @UserInfo
+    @UserInfo.then (data) =>
+      @userName = data
   mail: ->
     @$mdSidenav('right').toggle()
   logout: ->

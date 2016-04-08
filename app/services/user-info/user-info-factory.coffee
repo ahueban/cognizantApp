@@ -13,9 +13,8 @@ angular
     defer = $q.defer()
     url = 'https://blistering-heat-7559.firebaseio.com/users.json'
     uid = Database.getAuth().uid
-    users = $http.get(url).then (response) ->
+    $http.get(url).then (response) ->
       name = response.data[uid].name
       defer.resolve(name)
     defer.promise
-    "test"
   ]
